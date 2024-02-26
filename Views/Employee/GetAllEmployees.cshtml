@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<BankingSystems.Models.Employee>
+<h1>Get All Employees</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ssn</th>
+            <th>Bdate</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Ssn</td>
+                <td>@item.Bdate</td>
+                <td>@item.Address</td>
+                <td>@item.Gender</td>
+                <td>@item.Salary</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Employee" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
