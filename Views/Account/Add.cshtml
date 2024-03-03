@@ -4,9 +4,31 @@
 @{
 }
 @model BankingSystems.Models.AddAccountViewModel
+<style>
+    form{
+        justify-content: center;
+        background-color: white;
+        padding: 20px;
+    }
 
-<h1>Add Accounts</h1>
+
+    h1 {
+        text-align: center
+    }
+
+    body {
+        background-color: aliceblue;
+    }
+
+
+    button {
+        cursor: pointer;
+    }
+</style>
+
+
 <form method="post">
+    <h1>Add Accounts</h1>
     <div class="mt-3">
         <label class="form-label">Name</label>
         <input type="text" class="form-control" asp-for="Name" required />
@@ -31,8 +53,9 @@
         <input type="number" class="form-control" asp-for="NoOfTransactions" required />
     </div>
 
-    <div class="mt-3">
-        <button type="submit" class="btn btn-primary">Save</button>
+    <br />
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Save</button>
     </div>
 
 </form>
